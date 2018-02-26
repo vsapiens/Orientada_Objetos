@@ -1,0 +1,7 @@
+123 127.50 9876 Grapadora
+145 35.50 9876 Bloque para escritura 
+234 475.90 3456 Mesa redonda
+235 490.00 3456 Mesa cuadrada
+456 1200.00 5678 Silla roja
+467 975.00 5678 Sillon
+475 1522.00 5678 Escritorio

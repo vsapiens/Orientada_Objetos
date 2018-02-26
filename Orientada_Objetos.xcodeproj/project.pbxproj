@@ -1,0 +1,388 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5198FB72043119200CC5220 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5198FB52043119200CC5220 /* Video.cpp */; };
+		A51BB828203FC88C004D77FE /* Polinomio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55CD69F2037694C000DF48C /* Polinomio.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5711AA2200739C1002608B9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A5026A1120097AFE008EDCCE /* Palabra al reves.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Palabra al reves.cpp"; sourceTree = "<group>"; };
+		A510A7CD2016392000DC69FF /* Texto_Original.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texto_Original.cpp; sourceTree = "<group>"; };
+		A5198FB52043119200CC5220 /* Video.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Video.cpp; sourceTree = "<group>"; };
+		A5198FB82043199B00CC5220 /* EjemploVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EjemploVideo.h; sourceTree = "<group>"; };
+		A5198FBB204319BC00CC5220 /* Autor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Autor.h; sourceTree = "<group>"; };
+		A5198FBC204319C600CC5220 /* Materia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Materia.h; sourceTree = "<group>"; };
+		A5198FBD204319D000CC5220 /* Tema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tema.h; sourceTree = "<group>"; };
+		A5198FBF20431A0E00CC5220 /* Fecha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fecha.h; sourceTree = "<group>"; };
+		A52CD3CE200AD5A2001487E0 /* Dados_Histograma.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dados_Histograma.cpp; sourceTree = "<group>"; };
+		A531180E203C7F3100A440B7 /* PersonaTaxi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonaTaxi.h; sourceTree = "<group>"; };
+		A531180F203C7F7100A440B7 /* Persona Taxi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Persona Taxi.cpp"; sourceTree = "<group>"; };
+		A5311811203C7F8300A440B7 /* Taxi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taxi.h; sourceTree = "<group>"; };
+		A531780B2012548900D462A2 /* Ventas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ventas.cpp; sourceTree = "<group>"; };
+		A5422E1C202E03EB002C9262 /* Articulo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Articulo.cpp; sourceTree = "<group>"; };
+		A5422E1D202E03EB002C9262 /* Articulo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Articulo.hpp; sourceTree = "<group>"; };
+		A5534868200E5D4400F61960 /* StringReversed.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringReversed.cpp; sourceTree = "<group>"; };
+		A553486B200E624B00F61960 /* Factura.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Factura.cpp; sourceTree = "<group>"; };
+		A553486E200E8D0000F61960 /* Decimal_to_Binary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Decimal_to_Binary.cpp; sourceTree = "<group>"; };
+		A55CD69B20373BDD000DF48C /* Evento.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Evento.cpp; sourceTree = "<group>"; };
+		A55CD69C20373BDD000DF48C /* Evento.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Evento.hpp; sourceTree = "<group>"; };
+		A55CD69E20373C3C000DF48C /* Reloj.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Reloj.hpp; sourceTree = "<group>"; };
+		A55CD69F2037694C000DF48C /* Polinomio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Polinomio.cpp; sourceTree = "<group>"; };
+		A55CD6A02037694D000DF48C /* Polinomio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Polinomio.h; sourceTree = "<group>"; };
+		A5694B5C2026821100E53808 /* Factorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Factorial.cpp; sourceTree = "<group>"; };
+		A5711AA4200739C1002608B9 /* Orientada_Objetos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Orientada_Objetos; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5711AA7200739C1002608B9 /* DosPalabras.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DosPalabras.cpp; sourceTree = "<group>"; };
+		A5830DFB20179C1E00AE079B /* Pruba_Clases.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pruba_Clases.cpp; sourceTree = "<group>"; };
+		A5830DFC20179C1E00AE079B /* Pruba_Clases.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pruba_Clases.hpp; sourceTree = "<group>"; };
+		A5830DFE2017A02D00AE079B /* Fraccion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraccion.h; sourceTree = "<group>"; };
+		A5942FEE201E422E00B35902 /* SalaCine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SalaCine.cpp; sourceTree = "<group>"; };
+		A5942FEF201E422E00B35902 /* SalaCine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SalaCine.hpp; sourceTree = "<group>"; };
+		A5A363A2200A728C00E959C6 /* Puzzle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Puzzle.cpp; sourceTree = "<group>"; };
+		A5A4D8DC202A3B700030DC51 /* Arch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Arch.cpp; sourceTree = "<group>"; };
+		A5B070542020E5CD00701594 /* Codigo_HTML.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Codigo_HTML.cpp; path = Orientada_Objetos/Codigo_HTML/Codigo_HTML.cpp; sourceTree = SOURCE_ROOT; };
+		A5B9F95F20334ACD00E816E7 /* Sort3Words.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sort3Words.cpp; sourceTree = "<group>"; };
+		A5BDC72A2024C86100CD7B7F /* Complejo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Complejo.cpp; sourceTree = "<group>"; };
+		A5BDC72B2024C86100CD7B7F /* Complejo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complejo.hpp; sourceTree = "<group>"; };
+		A5C8280920407F3C00CCCE29 /* Fraccion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fraccion.cpp; sourceTree = "<group>"; };
+		A5D9B2BE201B905200E84548 /* CtaBanc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CtaBanc.cpp; sourceTree = "<group>"; };
+		A5D9B2BF201B905200E84548 /* CtaBanc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CtaBanc.hpp; sourceTree = "<group>"; };
+		A5E7FD462015B11D0047BADB /* Tiempos_Atletismo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tiempos_Atletismo.cpp; sourceTree = "<group>"; };
+		A5EA4410201CF77C00C06E7E /* Esfera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Esfera.cpp; sourceTree = "<group>"; };
+		A5EA4411201CF77D00C06E7E /* Esfera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Esfera.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5711AA1200739C1002608B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5198FB42043118200CC5220 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				A5198FB52043119200CC5220 /* Video.cpp */,
+				A5198FB82043199B00CC5220 /* EjemploVideo.h */,
+				A5198FBC204319C600CC5220 /* Materia.h */,
+				A5198FBD204319D000CC5220 /* Tema.h */,
+				A5198FBF20431A0E00CC5220 /* Fecha.h */,
+				A5198FBB204319BC00CC5220 /* Autor.h */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		A531180D203C7F2200A440B7 /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				A531180E203C7F3100A440B7 /* PersonaTaxi.h */,
+				A5311811203C7F8300A440B7 /* Taxi.h */,
+				A531180F203C7F7100A440B7 /* Persona Taxi.cpp */,
+			);
+			path = Taxi;
+			sourceTree = "<group>";
+		};
+		A5422E1B202E03D6002C9262 /* Articulo */ = {
+			isa = PBXGroup;
+			children = (
+				A5422E1C202E03EB002C9262 /* Articulo.cpp */,
+				A5422E1D202E03EB002C9262 /* Articulo.hpp */,
+			);
+			path = Articulo;
+			sourceTree = "<group>";
+		};
+		A5711A9B200739C1002608B9 = {
+			isa = PBXGroup;
+			children = (
+				A5711AA6200739C1002608B9 /* Orientada_Objetos */,
+				A5711AA5200739C1002608B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5711AA5200739C1002608B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5711AA4200739C1002608B9 /* Orientada_Objetos */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5711AA6200739C1002608B9 /* Orientada_Objetos */ = {
+			isa = PBXGroup;
+			children = (
+				A5B070572020EFFB00701594 /* Codigo_HTML */,
+				A5BDC72A2024C86100CD7B7F /* Complejo.cpp */,
+				A5422E1B202E03D6002C9262 /* Articulo */,
+				A5BDC72B2024C86100CD7B7F /* Complejo.hpp */,
+				A5D9B2BE201B905200E84548 /* CtaBanc.cpp */,
+				A5D9B2BF201B905200E84548 /* CtaBanc.hpp */,
+				A5B9F95F20334ACD00E816E7 /* Sort3Words.cpp */,
+				A52CD3CE200AD5A2001487E0 /* Dados_Histograma.cpp */,
+				A553486E200E8D0000F61960 /* Decimal_to_Binary.cpp */,
+				A5711AA7200739C1002608B9 /* DosPalabras.cpp */,
+				A531180D203C7F2200A440B7 /* Taxi */,
+				A5EA4410201CF77C00C06E7E /* Esfera.cpp */,
+				A5EA4411201CF77D00C06E7E /* Esfera.hpp */,
+				A5198FB42043118200CC5220 /* Video */,
+				A55CD69E20373C3C000DF48C /* Reloj.hpp */,
+				A553486B200E624B00F61960 /* Factura.cpp */,
+				A55CD69B20373BDD000DF48C /* Evento.cpp */,
+				A55CD69C20373BDD000DF48C /* Evento.hpp */,
+				A5830DFE2017A02D00AE079B /* Fraccion.h */,
+				A5C8280920407F3C00CCCE29 /* Fraccion.cpp */,
+				A55CD69F2037694C000DF48C /* Polinomio.cpp */,
+				A55CD6A02037694D000DF48C /* Polinomio.h */,
+				A5026A1120097AFE008EDCCE /* Palabra al reves.cpp */,
+				A5830DFB20179C1E00AE079B /* Pruba_Clases.cpp */,
+				A5830DFC20179C1E00AE079B /* Pruba_Clases.hpp */,
+				A5A363A2200A728C00E959C6 /* Puzzle.cpp */,
+				A5942FEE201E422E00B35902 /* SalaCine.cpp */,
+				A5942FEF201E422E00B35902 /* SalaCine.hpp */,
+				A5534868200E5D4400F61960 /* StringReversed.cpp */,
+				A510A7CD2016392000DC69FF /* Texto_Original.cpp */,
+				A5E7FD462015B11D0047BADB /* Tiempos_Atletismo.cpp */,
+				A531780B2012548900D462A2 /* Ventas.cpp */,
+				A5A4D8DC202A3B700030DC51 /* Arch.cpp */,
+			);
+			path = Orientada_Objetos;
+			sourceTree = "<group>";
+		};
+		A5B070572020EFFB00701594 /* Codigo_HTML */ = {
+			isa = PBXGroup;
+			children = (
+				A5B070542020E5CD00701594 /* Codigo_HTML.cpp */,
+				A5694B5C2026821100E53808 /* Factorial.cpp */,
+			);
+			path = Codigo_HTML;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5711AA3200739C1002608B9 /* Orientada_Objetos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5711AAB200739C1002608B9 /* Build configuration list for PBXNativeTarget "Orientada_Objetos" */;
+			buildPhases = (
+				A5711AA0200739C1002608B9 /* Sources */,
+				A5711AA1200739C1002608B9 /* Frameworks */,
+				A5711AA2200739C1002608B9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Orientada_Objetos;
+			productName = Orientada_Objetos;
+			productReference = A5711AA4200739C1002608B9 /* Orientada_Objetos */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5711A9C200739C1002608B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Erick González";
+				TargetAttributes = {
+					A5711AA3200739C1002608B9 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A5711A9F200739C1002608B9 /* Build configuration list for PBXProject "Orientada_Objetos" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5711A9B200739C1002608B9;
+			productRefGroup = A5711AA5200739C1002608B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5711AA3200739C1002608B9 /* Orientada_Objetos */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5711AA0200739C1002608B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51BB828203FC88C004D77FE /* Polinomio.cpp in Sources */,
+				A5198FB72043119200CC5220 /* Video.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A5711AA9200739C1002608B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A5711AAA200739C1002608B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A5711AAC200739C1002608B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5711AAD200739C1002608B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5711A9F200739C1002608B9 /* Build configuration list for PBXProject "Orientada_Objetos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5711AA9200739C1002608B9 /* Debug */,
+				A5711AAA200739C1002608B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5711AAB200739C1002608B9 /* Build configuration list for PBXNativeTarget "Orientada_Objetos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5711AAC200739C1002608B9 /* Debug */,
+				A5711AAD200739C1002608B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5711A9C200739C1002608B9 /* Project object */;
+}
