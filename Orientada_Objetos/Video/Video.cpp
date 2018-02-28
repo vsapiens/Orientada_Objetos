@@ -89,6 +89,7 @@ void getAutores()
     {
         aut[iCounter].setNombre(sNombreAutor);
         aut[iCounter].setIdAutor(idAutor);
+        
         iCounter++;
     }
     archEntrada.close();
@@ -106,6 +107,11 @@ void getEjemplos()
     getline(cin, sArchEntrada);
     
     archEntrada.open(sArchEntrada);
+    
+    for(int iAutorCounter = 0; iAutorCounter < 10; iAutorCounter++)
+    {
+        ejem[iAutorCounter].agregaAutor(aut[iAutorCounter].getIdAutor());
+    }    
     while(archEntrada>> idVideo>>sNombre>> idTema >>iDay>> iMonth>> iYear>> cantAutores>>listaAutores)
     {
         Fecha fechaElaboracion(iDay, iMonth, iYear);
@@ -164,5 +170,6 @@ int main()
     void getEjemplos();
     void displayMenu();
      */
+    cout<<"Si compila\n";
     return 0;
 }
