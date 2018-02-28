@@ -33,21 +33,92 @@ void getCharacter();
 
 void getMaterias()
 {
+    ifstream archEntrada;
     string sArchEntrada;
-    cout<< "Teclee el nombre del archivo de materias\n"
+    string sTitulo;
+    int iD, iCounter = 0;
+    
+    cout<< "Teclee el nombre del archivo de materias\n";
     cin.ignore();
     getline(cin, sArchEntrada);
     
-    ifstream archEntrada;
     archEntrada.open(sArchEntrada);
     
-    while()
-    
-    
+    while(archEntrada>> iD && getline(archEntrada, sTitulo))
+    {
+        mate[iCounter].setIdMateria(iD);
+        mate[iCounter].setNombre(sTitulo);
+        iCounter++;
+    }
+    archEntrada.close();
 }
-void getTemas();
-void getAutores();
-void getEjemplos();
+void getTemas()
+{
+    ifstream archEntrada;
+    string sArchEntrada;
+    string sNombreTema;
+    int idTema, idMateria, iCounter = 0;
+    
+    cout<< "Teclee el nombre del archivo de Temas\n";
+    cin.ignore();
+    getline(cin, sArchEntrada);
+    
+    archEntrada.open(sArchEntrada);
+    while(archEntrada>> idTema >> idMateria && getline(archEntrada, sNombreTema))
+    {
+        tem[iCounter].setIdTema(idTema);
+        tem[iCounter].setIdMateria(idMateria);
+        tem[iCounter].setNombre(sNombreTema);
+        iCounter++;
+    }
+    archEntrada.close();
+}
+void getAutores()
+{
+    ifstream archEntrada;
+    string sArchEntrada;
+    string sNombreAutor;
+    int idAutor, iCounter = 0;
+    
+    cout<< "Teclee el nombre del archivo de Autores\n";
+    cin.ignore();
+    getline(cin, sArchEntrada);
+    
+    archEntrada.open(sArchEntrada);
+    while(archEntrada>> idAutor && getline(archEntrada, sNombreAutor))
+    {
+        aut[iCounter].setNombre(sNombreAutor);
+        aut[iCounter].setIdAutor(idAutor);
+        iCounter++;
+    }
+    archEntrada.close();
+}
+void getEjemplos()
+{
+    ifstream archEntrada;
+    string sArchEntrada;
+    string sNombreAutor;
+    int idVideo, idTema, cantAutores, listaAutores,iCounter = 0, iDay, iMonth, iYear;
+    string sNombre;
+    
+    cout<< "Teclee el nombre del archivo de los videos de ejemplo\n";
+    cin.ignore();
+    getline(cin, sArchEntrada);
+    
+    archEntrada.open(sArchEntrada);
+    while(archEntrada>> idVideo>>sNombre>> idTema >>iDay>> iMonth>> iYear>> cantAutores>>listaAutores)
+    {
+        Fecha fechaElaboracion(iDay, iMonth, iYear);
+        
+        ejem[iCounter].setIdTema(idTema);
+        ejem[iCounter].setNombre(sNombre);
+        ejem[iCounter].setFechaElaboracion(fechaElaboracion);
+        ejem[iCounter].setIdVideo(idVideo);
+        
+        iCounter++;
+    }
+    archEntrada.close();
+}
 void getCharacter()
 {
     cout<< "Teclee la opcion del menu"<<endl;
