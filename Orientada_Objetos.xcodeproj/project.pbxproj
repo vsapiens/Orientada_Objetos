@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5198FB72043119200CC5220 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5198FB52043119200CC5220 /* Video.cpp */; };
-		A51BB828203FC88C004D77FE /* Polinomio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55CD69F2037694C000DF48C /* Polinomio.cpp */; };
+		A532208E204625A90043AA68 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5198FB52043119200CC5220 /* Video.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -234,8 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51BB828203FC88C004D77FE /* Polinomio.cpp in Sources */,
-				A5198FB72043119200CC5220 /* Video.cpp in Sources */,
+				A532208E204625A90043AA68 /* Video.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

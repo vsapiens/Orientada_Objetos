@@ -11,17 +11,23 @@
 class Fecha
 {
 public:
+    //Constructor Default
     Fecha();
-    Fecha(int dd, int mm, int aa){this->dd = dd;this->mm = mm;this->aa = aa;};
-    int getDay(){return dd;};
-    int getMonth(){return mm;};
-    int getYear(){return aa;};
     
-    void setDay(int dd){this->dd = dd;};
-    void setMonth(int mm){this->mm = mm;};
-    void setYear(int aa){this->aa = aa;};
+    //Constructor con parametros
+    Fecha(int dd, int mm, int aa){this->dd = dd;this->mm = mm;this->aa = aa;}
     
+    //Metodos de Acceso
+    int getDay(){return dd;}
+    int getMonth(){return mm;}
+    int getYear(){return aa;}
     void muestra();
+    
+    //Metodos de Modificacion
+    void setDay(int dd){this->dd = dd;}
+    void setMonth(int mm){this->mm = mm;}
+    void setYear(int aa){this->aa = aa;}
+    void setFecha(int dd,int mm,int aa){this->dd = dd;this->mm = mm;this->aa = aa;}
 private:
     int aa, mm, dd;
 };
@@ -29,7 +35,7 @@ Fecha::Fecha()
 {
     dd = 1;
     mm = 1;
-    aa = 2018;
+    aa = 2000;
 }
 void Fecha::muestra()
 {
@@ -71,6 +77,9 @@ void Fecha::muestra()
             break;
         case 12:
             Mes = "Diciembre";
+            break;
+        default:
+            Mes = "Enero";
             break;
     }
     cout<<dd<<"-"<<Mes<<"-"<<aa<<endl;

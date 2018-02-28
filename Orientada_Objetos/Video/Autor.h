@@ -11,13 +11,19 @@
 class Autor
 {
 public:
+    //Constructor Default
     Autor();
-    Autor(int idAutor, string nombre){this->idAutor =  idAutor;this->nombre = nombre;};
-    int getIdAutor(){return idAutor;};
-    string getNombre(){return nombre;};
     
-    void setIdAutor(int idAutor){this->idAutor =  idAutor;};
-    void setNombre(string nombre){this->nombre = nombre;};
+    //Constructor con parametros
+    Autor(int idAutor, string nombre){this->idAutor =  idAutor;this->nombre = nombre;}
+    
+    //Metodos de Acceso
+    int getIdAutor(){return idAutor;}
+    string getNombre(){return nombre;}
+    
+    //Metodos de Modificacion
+    void setIdAutor(int idAutor){this->idAutor =  idAutor;}
+    void setNombre(string nombre){this->nombre = nombre;}
     
 private:
     int idAutor;
@@ -25,7 +31,7 @@ private:
 };
 Autor::Autor()
 {
-    idAutor = 0000;
-    nombre = "No Definido";
+    idAutor = 0;
+    nombre = "-";
 }
 #endif /* Autor_h */

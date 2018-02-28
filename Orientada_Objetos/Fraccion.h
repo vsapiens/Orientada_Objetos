@@ -10,15 +10,21 @@
 #define Fraccion_h
 class Fraccion
 {
-    friend Fraccion operator+(Fraccion , Fraccion);
-    friend bool operator >(Fraccion, Fraccion);
-    friend Fraccion operator+(Fraccion , int);
-    friend Fraccion operator ++(Fraccion);
+    friend bool operator>(Fraccion, Fraccion);
+    friend Fraccion operator+(Fraccion,Fraccion);
+    friend Fraccion operator+(Fraccion,int);
+    friend Fraccion operator+(int,Fraccion);
+    friend Fraccion operator++(Fraccion);
+    friend void operator+=(Fraccion,Fraccion);
     
 public:
     Fraccion operator * (Fraccion);
-    Fraccion operator - ();
+    Fraccion operator-(int);
     Fraccion operator-(Fraccion);
+    bool operator >(Fraccion);
+    Fraccion operator+(Fraccion);
+    Fraccion operator+(int);
+    Fraccion operator--();
     
     Fraccion();
     Fraccion(int, int);
@@ -73,8 +79,10 @@ void Fraccion::muestra()
 }
 Fraccion operator+(Fraccion f1, Fraccion f2)
 {
-    Fraccion f3(f1.getDen()*f2.getNum() + f2.getDen()*f1.getNum(),f1.getDen()*f2.getDen());
-    return f3;
+    Fraccion res;
+    res.setDen(f1.getDen()*f2.getNum() + f2.getDen()*f1.getNum());
+    res.setNum(f1.getDen()*f2.getDen());
+    return res;
 }
 Fraccion Fraccion:: operator * (Fraccion f1)
 {
@@ -85,15 +93,50 @@ bool operator > (Fraccion f1, Fraccion f2)
 {
     return f1.calcValorReal() > f2.calcValorReal();
 }
-Fraccion operator+(Fraccion f1, int e)
+Fraccion operator+(Fraccion f, int e)
 {
-    Fraccion f(e,1);
-    
-    return f1 + f;
+    Fraccion f2(e,1);
+    Fraccion res;
+    res.setDen(f.getNum()*e + f.getDen());
+    res.setNum(f.getNum());
+    return res;
+}
+/** Fraccion operator+(int e, Fraccion f1)
+{
+    return f1 + e;
 }
 Fraccion operator++(Fraccion &f)
+{
+    f =  f + 1;
+    return f;
+}
+
+Fraccion Fraccion::operator++(Fraccion &f)
 {
     f = f + 1;
     return f;
 }
+Fraccion Fraccion::operator--()
+{
+    *this =  *this + -1;
+    return
+}
+Fraccion Fraccion :: operator+(Fraccion)
+{
+    
+}
+Fraccion Fraccion :: operator+(int e)
+{
+    
+}
+bool Fraccion :: operator >(Fraccion f)
+{
+    return this->calcValorReal()< f.calcValorReal();
+}
+
+void operator += (Fraccion &f1, Fraccion &f2)
+{
+    f1 = f1 + f2;
+}
+ */
 #endif /* Fraccion_h */

@@ -12,14 +12,19 @@
 class Materia
 {
 public:
+    //Constructor Default
     Materia();
-    Materia(int idMateria, string nombre){this->idMateria = idMateria;this->nombre = nombre;};
     
-    int getIdMateria(){return idMateria;};
-    string getNombre(){return nombre;};
+    //Constructor con parametros
+    Materia(int idMateria, string nombre){this->idMateria = idMateria;this->nombre = nombre;}
     
-    void setIdMateria(int idMateria){this->idMateria = idMateria;};
-    void setNombre(string nombre){this->nombre = nombre;};
+    //Metodos de Acceso
+    int getIdMateria(){return idMateria;}
+    string getNombre(){return nombre;}
+    
+    //Metodos de Modificacion
+    void setIdMateria(int idMateria){this->idMateria = idMateria;}
+    void setNombre(string nombre){this->nombre = nombre;}
     
 private:
     int idMateria;
@@ -28,7 +33,7 @@ private:
 
 Materia::Materia()
 {
-    idMateria = 0000;
-    nombre = "No definido";
+    idMateria = 0;
+    nombre = "-";
 }
 #endif /* Materia_h */
