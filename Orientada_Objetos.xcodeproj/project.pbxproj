@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A532208E204625A90043AA68 /* Video.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5198FB52043119200CC5220 /* Video.cpp */; };
+		A5E8886F2048E2BF008F64E9 /* Clase_Tiempo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5E8886E2048E2BF008F64E9 /* Clase_Tiempo.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,7 @@
 		A5D9B2BE201B905200E84548 /* CtaBanc.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CtaBanc.cpp; sourceTree = "<group>"; };
 		A5D9B2BF201B905200E84548 /* CtaBanc.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CtaBanc.hpp; sourceTree = "<group>"; };
 		A5E7FD462015B11D0047BADB /* Tiempos_Atletismo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tiempos_Atletismo.cpp; sourceTree = "<group>"; };
+		A5E8886E2048E2BF008F64E9 /* Clase_Tiempo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Clase_Tiempo.cpp; sourceTree = "<group>"; };
 		A5EA4410201CF77C00C06E7E /* Esfera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Esfera.cpp; sourceTree = "<group>"; };
 		A5EA4411201CF77D00C06E7E /* Esfera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Esfera.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 				A55CD69B20373BDD000DF48C /* Evento.cpp */,
 				A55CD69C20373BDD000DF48C /* Evento.hpp */,
 				A5830DFE2017A02D00AE079B /* Fraccion.h */,
+				A5E8886E2048E2BF008F64E9 /* Clase_Tiempo.cpp */,
 				A5C8280920407F3C00CCCE29 /* Fraccion.cpp */,
 				A55CD69F2037694C000DF48C /* Polinomio.cpp */,
 				A55CD6A02037694D000DF48C /* Polinomio.h */,
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E8886F2048E2BF008F64E9 /* Clase_Tiempo.cpp in Sources */,
 				A532208E204625A90043AA68 /* Video.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
