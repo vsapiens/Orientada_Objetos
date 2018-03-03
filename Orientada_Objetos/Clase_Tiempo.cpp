@@ -26,10 +26,10 @@ public:
     void muestra();
     
     // Miembro de la clase. operador ++ incrementa el Tiempo en 1 minuto y regresa el tiempo
-    void operator ++();
+    Tiempo operator ++();
     //Friend. operador -- decrementa el Tiempo en 1 minuto y regresa el tiempo
     // si la hora es 0:0 y se pide decrementar, regresa 0:0
-    friend void operator --(Tiempo);
+    friend Tiempo operator --(Tiempo &t1);
     // Miembro de la clase. operador > Compara si el primer Tiempo es mayor que el segundo
     bool operator >(Tiempo);
     // Miembro de la clase. operador + Para sumar tiempo + minutos, regresa un tiempo como resultado
@@ -39,7 +39,7 @@ public:
     // Miembro de la clase. operador + Suma t1 con t2 y regresa un tiempo con el resultado
     Tiempo operator +(Tiempo);
     // Friend. operador += Suma t1 con t2 y deja el resultado en t1, no regresa nada
-    friend void operator += (Tiempo, Tiempo);
+    friend void operator += (Tiempo &t1, Tiempo t2);
     
 private:
     int hora;
@@ -79,16 +79,43 @@ void Tiempo::muestra() {
     else
         cout << minu;
 }
-void Tiempo:: operator ++()
+// Miembro de la clase. operador + Para sumar tiempo + minutos, regresa un tiempo como resultado
+Tiempo Tiempo:: operator + (int iNumber)
 {
+    int Horas = iNumber /60;
     
+    int Minutos = iNumber % 60;
+    Tiempo t1;
+    t1.setHora(getHora());
+    t1.setMinu(getMinu());
+    
+    if(Minutos + t1.getMinu() > 59)
+    {
+        if(Horas + t1.getHora() > 24)
+        {
+        t1.setMinu(Minutos+t1.getMinu()-60);
+        t1.setHora(Horas +t1.getHora()-23);
+        }
+        else
+        {
+        t1.setMinu(Minutos+t1.getMinu()-60);
+        t1.setHora(Horas + t1.getHora()+1);
+        }
+    }
+    
+    else
+    {
+        t1.setMinu(Minutos + t1.getMinu());
+        t1.setHora(Horas + t1.getHora());
+    }
+    return t1;
 }
-//Friend. operador -- decrementa el Tiempo en 1 minuto y regresa el tiempo
-// si la hora es 0:0 y se pide decrementar, regresa 0:0
-void operator --(Tiempo)
+Tiempo Tiempo:: operator ++()
 {
-    
+    *this = *this + 1;
+    return (*this);
 }
+
 // Miembro de la clase. operador > Compara si el primer Tiempo es mayor que el segundo
 bool Tiempo:: operator >(Tiempo t1)
 {
@@ -100,20 +127,29 @@ bool Tiempo:: operator >(Tiempo t1)
  {
     return true;
  }
- else return true;
+ return false;
 }
-// Miembro de la clase. operador + Para sumar tiempo + minutos, regresa un tiempo como resultado
-Tiempo Tiempo:: operator +(int iNumber)
+
+//Friend. operador -- decrementa el Tiempo en 1 minuto y regresa el tiempo
+// si la hora es 0:0 y se pide decrementar, regresa 0:0
+Tiempo operator --(Tiempo &t1)
 {
-    if(iNumber+minu < 60)
+    if(t1.getHora() == 0 && t1.getMinu() == 0)
     {
-        minu += iNumber;
+        return t1;
+    }
+    if(t1.getHora() != 0 && t1.getMinu() == 0)
+    {
+        t1.setHora(t1.getHora()-1);
+        t1.setMinu(59);
+        return t1;
     }
     else
     {
-    
+        t1.setHora(t1.getHora());
+        t1.setMinu(t1.getMinu()-1);
+        return t1;
     }
-    return 
 }
 // Friend. operador + Para sumar minutos + tiempo, regresa un tiempo como resultado
 Tiempo operator +(int iNumber, Tiempo t1)
@@ -121,14 +157,16 @@ Tiempo operator +(int iNumber, Tiempo t1)
     return t1 + iNumber;
 }
 // Miembro de la clase. operador + Suma t1 con t2 y regresa un tiempo con el resultado
-Tiempo Tiempo:: operator +(Tiempo)
+Tiempo Tiempo:: operator +(Tiempo t1)
 {
-    
+    Tiempo t3;
+    t3 = *this + (t1.getHora()*60 +t1.getMinu());
+    return t3;
 }
 // Friend. operador += Suma t1 con t2 y deja el resultado en t1, no regresa nada
-void operator += (Tiempo, Tiempo)
+void operator += (Tiempo &t1, Tiempo t2)
 {
-    
+    t1 = t1 + t2;
 }
 
 int main() {

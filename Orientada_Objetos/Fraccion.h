@@ -139,4 +139,79 @@ void operator += (Fraccion &f1, Fraccion &f2)
     f1 = f1 + f2;
 }
  */
+Fraccion Fraccion::operator*(Fraccion f1)
+{
+    Fraccion res;
+    
+    res.num = num * f1.num;
+    res.den = den * f1.den;
+    
+    return res;
+}
+
+Fraccion Fraccion::operator-()
+{
+    Fraccion res(-num, den);
+    return res;
+}
+
+Fraccion Fraccion::operator-(Fraccion f1)
+{
+    Fraccion res;
+    
+    res.num = num * f1.den- den * f1.num;
+    res.den = den* f1.den;
+    
+    return res;
+}
+
+Fraccion operator+(Fraccion f1, Fraccion f2)
+{
+    Fraccion f3;
+    f3.num = f1.num* f2.den + f1.den*f2.num;
+    f3.den = f1.den*f2.den;
+    
+    return f3;
+}
+
+bool operator> (Fraccion f1, Fraccion f2)
+{
+    return f1.calcValorReal() > f2.calcValorReal();
+}
+
+Fraccion operator+(Fraccion f, int e)
+{
+    Fraccion f2(e,1);
+    return f + f2;
+}
+
+Fraccion operator+(int e, Fraccion f)
+{
+    return f + e;
+}
+
+
+Fraccion operator++(Fraccion &f1)
+{
+    f1 = f1 + 1;
+    
+    return f1;
+}
+
+bool Fraccion::operator <(Fraccion f1)
+{
+    return calcValorReal() > f1.calcValorReal();
+}
+
+Fraccion Fraccion::operator --()
+{
+    *this = *this +(-1);
+    return *this;
+}
+
+void operator += (Fraccion &f1, Fraccion f2)
+{
+    f1 = f1 + f2;
+}
+
 #endif /* Fraccion_h */
