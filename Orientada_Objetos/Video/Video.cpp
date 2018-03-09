@@ -156,17 +156,21 @@ void buscarporMateria(int idMateria)
 }
 void buscarporAutor(int idAutor)
 {
+    int iCounterCollab = 0;
+    
     for(int iCounter = iCantEjemplos; iCounter--;)
         {
         for(int iCounter2 = iCantAutores; iCounter2--;)
             {
-                if(ejem[iCounter].getListadeAutores(iCounter2) == idAutor)
+                 if(ejem[iCounter].getListadeAutores(iCounter2) == idAutor)
                     {
-                        cout<<"ID del Video: "<<ejem[iCounter].getIdVideo()<<endl;
-                        cout<<"Nombre del Video: "<<ejem[iCounter].getNombre()<<endl;
+                        cout<<"ID del Video : "<<ejem[iCounter].getIdVideo()<<endl;
+                        cout<<"Nombre del Video : "<<ejem[iCounter].getNombre()<<endl;
+                        iCounterCollab++;
                     }
             }
         }
+    cout<<"Total de Colaboraciones por el Autor: "<<iCounterCollab<<endl;
 }
 void getMaterias()
 {
@@ -235,7 +239,7 @@ void getEjemplos()
         {
             archEntrada>>iArrAutores[iCountArray];
         }
-        
+    
 
          for(int iTemaCounter = 0; iTemaCounter< iCantTemas; iTemaCounter++)
          {
@@ -253,7 +257,6 @@ void getEjemplos()
                  }
              }
          }
-        
         
             if(bCargar)
             {
@@ -291,7 +294,7 @@ void darAltaVideos()
     cout<<"\n"<<"Ingrese el Nombre del Video\t";
     cin.ignore();
     getline(cin, sNombre);
-    cout<<"\n"<<"Ingrese el idTema\t";
+    cout<<"\n"<<"Ingrese el Id del Tema\t";
     cin>>idTema;
     while(!existeTema(idTema))
     {
@@ -299,8 +302,12 @@ void darAltaVideos()
         cin.ignore();
         cin>>idTema;
     }
-    cout<<"\n"<<"Ingrese la Fecha en el orden Dia, Mes, Año \t";
-    cin>>iDay>>iMonth>>iYear;
+    cout<<"\n"<<"Ingrese el Dia de la Fecha\t";
+    cin>>iDay;
+    cout<<"\n"<<"Ingrese el Mes de la Fecha\t";
+    cin>>iMonth;
+    cout<<"\n"<<"Ingrese el Año de la Fecha\t";
+    cin>>iYear;
     cout<<"\n"<<"Ingrese la cantidad de autores\t";
     cin>>cantAutores;
     while(cantAutores > 10 || cantAutores < 1)
@@ -357,6 +364,7 @@ void displayMenu()
         {
                 //Consulta información de Materias, Temas y Autores
             case 'a':
+            case 'A':
                 cout<<"\n\n"<<"Temas\n\n";
                 cout<<"ID\t"<<"ID Materia\t"<<"Nombre\n";
                 cout<<endl;
@@ -386,11 +394,13 @@ void displayMenu()
                 break;
                 //Dar de alta Videos de Ejemplo
             case 'b':
+            case 'B':
                 darAltaVideos();
                 break;
                 
                 //Consultar la lista de Videos por tema
             case 'c':
+            case 'C':
                 int idBuscaTema;
                 cout<<"¿Cual es el ID del Tema? \t";
                 cin>>idBuscaTema;
@@ -408,7 +418,7 @@ void displayMenu()
                 //Consultar la lista de Videos por materia
                 
             case 'd':
-                
+            case 'D':
                 int idBuscaMateria;
                 cout<<"¿Cual es el ID del Materia? \t";
                 cin>>idBuscaMateria;
@@ -425,6 +435,7 @@ void displayMenu()
                 break;
                 //Consultar lista de Videos
             case 'e':
+            case 'E':
                 cout<<"\n\n"<<"Videos\n\n";
                 for(int iCounter = iCantEjemplos; iCounter--;)
                 {
@@ -448,6 +459,7 @@ void displayMenu()
                 break;
                 //Consulta videos por autor
             case 'f':
+            case 'F':
                 int idBuscaAutor;
                 cout<<"¿Cual es el ID del Autor? \t";
                 cin>>idBuscaAutor;
@@ -459,13 +471,15 @@ void displayMenu()
                     cin>>idBuscaAutor;
                     bExiste = existeAutor(idBuscaAutor);
                 }
+                despliegarAutor(idBuscaAutor);
+                cout<<endl;
                 buscarporAutor(idBuscaAutor);
                 cout<<endl;
                 break;
                 
         }
         
-    } while(cMenu != 'g');
+    } while(cMenu != 'g' || cMenu != 'G');
 }
 int main()
 {
