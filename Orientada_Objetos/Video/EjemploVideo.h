@@ -15,7 +15,9 @@
 
 class EjemploVideo
 {
+    
 public:
+    int posicion[10];
     //Constructor Default
     EjemploVideo();
     
@@ -46,7 +48,10 @@ EjemploVideo::EjemploVideo()
     idTema = 0;
     cantidadAutores = 0;
     for(int iCounter= 0; iCounter<10; iCounter++)
-    listaAutores[iCounter]=0;
+    {
+    listaAutores[iCounter] = 0;
+    posicion[iCounter] = 0;
+    }
     nombre = "-";
     fechaElaboracion.setDay(1);
     fechaElaboracion.setYear(2000);
@@ -54,7 +59,7 @@ EjemploVideo::EjemploVideo()
 }
 bool EjemploVideo::agregaAutor(int idAutor)
 {
-    for(int iCounter = 0; iCounter < cantidadAutores-1; iCounter++)
+    for(int iCounter = 0; iCounter < cantidadAutores; iCounter++)
     {
         if (listaAutores[iCounter] == idAutor || cantidadAutores == 10)
             return false;
