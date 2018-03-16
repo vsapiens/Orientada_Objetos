@@ -121,6 +121,7 @@ void despliegarAutor(int idAutor)
 
 void buscarporTema(int idTema)
 {
+    bool noHay = true;
     for(int iCounter = 0; iCounter < iCantEjemplos; iCounter++)
         {
             if(ejem[iCounter].getIdTema() == idTema)
@@ -141,8 +142,14 @@ void buscarporTema(int idTema)
                     despliegarAutor(ejem[iCounter].getListadeAutores(iInnerCounter));
                 }
                 cout<<"\n\n";
+                noHay = false;
             }
         }
+    
+    if(noHay)
+    {
+        cout<<"No hay Videos Disponibles"<<endl;
+    }
 }
 void buscarporMateria(int idMateria)
 {
@@ -177,8 +184,10 @@ void getMaterias()
     ifstream archEntrada;
     string sTitulo;
     int iD, iCounter = 0;
-    
-    archEntrada.open("Materias.txt");
+    string sArchEntrada;
+    cout<<"Ingrese el nombre del archivo de Materias con .txt:"<<endl;
+    cin>>sArchEntrada;
+    archEntrada.open(sArchEntrada);
     
     while(archEntrada>> iD && getline(archEntrada, sTitulo))
     {
@@ -194,7 +203,10 @@ void getTemas()
     ifstream archEntrada;
     string sNombreTema;
     int idTema, idMateria, iCounter = 0;
-    archEntrada.open("Temas.txt");
+    string sArchEntrada;
+    cout<<"Ingrese el nombre del archivo de Temas con .txt:"<<endl;
+    cin>>sArchEntrada;
+    archEntrada.open(sArchEntrada);
     while(archEntrada>> idTema >> idMateria && getline(archEntrada, sNombreTema))
     {
         tem[iCounter].setIdTema(idTema);
@@ -210,8 +222,10 @@ void getAutores()
     ifstream archEntrada;
     string sNombreAutor;
     int idAutor, iCounter = 0;
-    
-    archEntrada.open("Autores.txt");
+    string sArchEntrada;
+    cout<<"Ingrese el nombre del archivo de Autores con .txt:"<<endl;
+    cin>>sArchEntrada;
+    archEntrada.open(sArchEntrada);
     while(archEntrada>> idAutor && getline(archEntrada, sNombreAutor))
     {
         aut[iCounter].setNombre(sNombreAutor);
@@ -228,8 +242,11 @@ void getEjemplos()
     int idVideo, idTema, iCounter = 0,iTrueCounter = 0, cantAutores, iDay, iMonth, iYear;
     string sNombre;
     bool bCargar = false;
+    string sArchEntrada;
+    cout<<"Ingrese el nombre del archivo de Ejemplos  con .txt:"<<endl;
+    cin>>sArchEntrada;
     //Check idTema y checar que todos los autores existan
-    archEntrada.open("EjemploVideo.txt");
+    archEntrada.open(sArchEntrada);
     
     while(archEntrada>> idVideo>>sNombre>> idTema >>iDay>> iMonth>> iYear>> cantAutores)
     {
@@ -479,7 +496,7 @@ void displayMenu()
                 
         }
         
-    } while(cMenu != 'g' || cMenu != 'G');
+    } while(cMenu != 'g' && cMenu != 'G');
 }
 int main()
 {
