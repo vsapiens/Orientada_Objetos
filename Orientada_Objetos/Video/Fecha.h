@@ -37,6 +37,7 @@ Fecha::Fecha()
     mm = 1;
     aa = 2000;
 }
+};
 void Fecha::muestra()
 {
     string Mes;
@@ -84,5 +85,4 @@ void Fecha::muestra()
     }
     cout<<dd<<"-"<<Mes<<"-"<<aa<<endl;
 }
-
 #endif /* Fecha_h */

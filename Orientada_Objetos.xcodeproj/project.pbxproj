@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5300F8C205C25C30012393A /* CtaBanc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D9B2BE201B905200E84548 /* CtaBanc.cpp */; };
+		A511F3EB207BBBED0028AC42 /* Fecha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A511F3E9207BBBED0028AC42 /* Fecha.cpp */; };
+		A55F753D2077C73800329B84 /* ejercicioPlantillas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55F753C2077C73800329B84 /* ejercicioPlantillas.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A5026A1120097AFE008EDCCE /* Palabra al reves.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Palabra al reves.cpp"; sourceTree = "<group>"; };
 		A510A7CD2016392000DC69FF /* Texto_Original.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Texto_Original.cpp; sourceTree = "<group>"; };
+		A511F3E9207BBBED0028AC42 /* Fecha.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fecha.cpp; sourceTree = "<group>"; };
+		A511F3EA207BBBED0028AC42 /* Fecha.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Fecha.hpp; sourceTree = "<group>"; };
 		A5198FB52043119200CC5220 /* Video.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Video.cpp; sourceTree = "<group>"; };
 		A5198FB82043199B00CC5220 /* EjemploVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EjemploVideo.h; sourceTree = "<group>"; };
 		A5198FBB204319BC00CC5220 /* Autor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Autor.h; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		A55CD69E20373C3C000DF48C /* Reloj.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Reloj.hpp; sourceTree = "<group>"; };
 		A55CD69F2037694C000DF48C /* Polinomio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Polinomio.cpp; sourceTree = "<group>"; };
 		A55CD6A02037694D000DF48C /* Polinomio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Polinomio.h; sourceTree = "<group>"; };
+		A55F753C2077C73800329B84 /* ejercicioPlantillas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ejercicioPlantillas.cpp; sourceTree = "<group>"; };
+		A55F858320655A650063D986 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		A55F858420655A950063D986 /* Perro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Perro.h; sourceTree = "<group>"; };
+		A55F858620655AAB0063D986 /* Gato.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gato.h; sourceTree = "<group>"; };
+		A55F858720655E710063D986 /* Animal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Animal.cpp; sourceTree = "<group>"; };
 		A5694B5C2026821100E53808 /* Factorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Factorial.cpp; sourceTree = "<group>"; };
 		A5711AA4200739C1002608B9 /* Orientada_Objetos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Orientada_Objetos; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5711AA7200739C1002608B9 /* DosPalabras.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DosPalabras.cpp; sourceTree = "<group>"; };
@@ -81,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A511F3E8207BBBDA0028AC42 /* Proyecto 3 */ = {
+			isa = PBXGroup;
+			children = (
+				A511F3E9207BBBED0028AC42 /* Fecha.cpp */,
+				A511F3EA207BBBED0028AC42 /* Fecha.hpp */,
+			);
+			path = "Proyecto 3";
+			sourceTree = "<group>";
+		};
 		A5198FB42043118200CC5220 /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +154,12 @@
 				A5422E1B202E03D6002C9262 /* Articulo */,
 				A5BDC72B2024C86100CD7B7F /* Complejo.hpp */,
 				A5D9B2BE201B905200E84548 /* CtaBanc.cpp */,
+				A511F3E8207BBBDA0028AC42 /* Proyecto 3 */,
+				A55F858320655A650063D986 /* Animal.h */,
+				A55F858720655E710063D986 /* Animal.cpp */,
+				A55F753C2077C73800329B84 /* ejercicioPlantillas.cpp */,
+				A55F858420655A950063D986 /* Perro.h */,
+				A55F858620655AAB0063D986 /* Gato.h */,
 				A5D9B2BF201B905200E84548 /* CtaBanc.h */,
 				A5300F8D205C25E40012393A /* Chequera.h */,
 				A5B9F95F20334ACD00E816E7 /* Sort3Words.cpp */,
@@ -237,7 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5300F8C205C25C30012393A /* CtaBanc.cpp in Sources */,
+				A55F753D2077C73800329B84 /* ejercicioPlantillas.cpp in Sources */,
+				A511F3EB207BBBED0028AC42 /* Fecha.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
