@@ -45,6 +45,9 @@ public:
 private:
     // atributos
     int dd, mm, aa;
+    string nombreMes();
+    bool esBisiesto();
+    
 };
 // como friend la sobrecarga del operador >
 bool operator >(Fecha f1, Fecha f2)
@@ -71,28 +74,141 @@ bool operator == (Fecha f1, Fecha f2)
 {
     return ((f1.dd == f2.dd) && (f1.mm == f2.mm) && (f1.aa == f2.aa));
 }
+string Fecha::nombreMes()
+{
+    string Mes;
+    switch(this->mm)
+    {
+        case 1:
+            Mes = "Ene";
+            break;
+        case 2:
+            Mes = "Feb";
+            break;
+        case 3:
+            Mes = "Mar";
+            break;
+        case 4:
+            Mes = "Abr";
+            break;
+        case 5:
+            Mes = "May";
+            break;
+        case 6:
+            Mes = "Jun";
+            break;
+        case 7:
+            Mes = "Jul";
+            break;
+        case 8:
+            Mes = "Ago";
+            break;
+        case 9:
+            Mes = "Sep";
+            break;
+        case 10:
+            Mes = "Oct";
+            break;
+        case 11:
+            Mes = "Nov";
+            break;
+        case 12:
+            Mes = "Dic";
+            break;
+    }
+    return Mes;
+}
+bool Fecha::esBisiesto()
+{
+if(!(this->aa % 400 && this->aa % 100))
+{
+    return true;
+}
+return false;
+}
 // como friend la sobrecarga del operador +
 // que recibe como parametro una fecha y un numero entero
 // que representa una cantidad de dias y regresa
 // la fecha a la que se le agregaron los dias indicados
 Fecha operator +(Fecha f1, int n)
 {
-    
-    
-    if(!(f1.aa % 4 && f1.mm % 12-3))
-    
-    
+    int iResult = 0;
+    iResult = f1.dd += n;
+    while(iResult)
+    {
+        
+    switch (f1.mm) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+            if(f1.dd > 31)
+            {
+                f1.dd -= 31;
+                f1.mm++;
+                iResult -= 31;
+            }
+            else iResult -= f1.dd;
+            break;
+        
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if(f1.dd > 30)
+            {
+                f1.dd -= 30;
+                f1.mm++;
+                iResult -= 30;
+            }
+            else iResult -= f1.dd;
+            break;
+        case 2:
+            if(f1.esBisiesto())
+            {
+                if(f1.dd > 29)
+                {
+                    f1.dd -= 29;
+                    f1.mm++;
+                    iResult -= 29;
+                }
+                else iResult -= f1.dd;
+                break;
+            }
+            else
+            {
+                if(f1.dd > 28)
+                {
+                    f1.dd -= 28;
+                    f1.mm++;
+                    iResult -= 28;
+                }
+                else iResult -= f1.dd;
+                break;
+            }
+            break;
+       
+        case 12:
+            if(f1.dd > 31)
+            {
+                f1.dd -= 31;
+                f1.mm = 1;
+                f1.aa++;
+                iResult -= 31;
+            }
+            else iResult -= f1.dd;
+            break;
+    }
+}
     return f1;
 }
 // como friend la sobrecarga del operador >>
 // que lee 3 valores enteros: dia, mes, anio con 4 digitos
 istream& operator >>(istream& in,Fecha& f1)
 {
-    int iNumber;
-    in>> iNumber;
-    in>>f1.dd>>iNumber;
-    in>>f1.mm>>iNumber;
-    in>>f1.aa>>iNumber;
+    in>>f1.dd>>f1.mm>>f1.aa;
     return in;
 }
 // como friend la sobrecarga del operador <<
@@ -100,7 +216,7 @@ istream& operator >>(istream& in,Fecha& f1)
 // no incluyas espacios ni enter
 ostream& operator <<(ostream& out,Fecha& f1)
 {
-    out<<f1.dd<<"/"<<f1.mm<<"/"<<f1.aa<<"/"<<endl;
+    out<<f1.dd<<"/"<<f1.nombreMes()<<"/"<<f1.aa<<"/"<<endl;
     return out;
 }
 #endif /* Fecha_hpp */

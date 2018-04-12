@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A511F3EB207BBBED0028AC42 /* Fecha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A511F3E9207BBBED0028AC42 /* Fecha.cpp */; };
-		A55F753D2077C73800329B84 /* ejercicioPlantillas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A55F753C2077C73800329B84 /* ejercicioPlantillas.cpp */; };
+		A5F8235C207FA2270007F1FE /* Fecha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A511F3E9207BBBED0028AC42 /* Fecha.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +39,10 @@
 		A531180F203C7F7100A440B7 /* Persona Taxi.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Persona Taxi.cpp"; sourceTree = "<group>"; };
 		A5311811203C7F8300A440B7 /* Taxi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Taxi.h; sourceTree = "<group>"; };
 		A531780B2012548900D462A2 /* Ventas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Ventas.cpp; sourceTree = "<group>"; };
+		A540E791207FADB2005879F6 /* Reserva.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reserva.h; sourceTree = "<group>"; };
+		A540E792207FB43E005879F6 /* Libro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Libro.h; sourceTree = "<group>"; };
+		A540E793207FB6B0005879F6 /* Disco.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Disco.h; sourceTree = "<group>"; };
+		A540E794207FB750005879F6 /* Software.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Software.h; sourceTree = "<group>"; };
 		A5422E1C202E03EB002C9262 /* Articulo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Articulo.cpp; sourceTree = "<group>"; };
 		A5422E1D202E03EB002C9262 /* Articulo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Articulo.hpp; sourceTree = "<group>"; };
 		A5534868200E5D4400F61960 /* StringReversed.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StringReversed.cpp; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		A5694B5C2026821100E53808 /* Factorial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Factorial.cpp; sourceTree = "<group>"; };
 		A5711AA4200739C1002608B9 /* Orientada_Objetos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Orientada_Objetos; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5711AA7200739C1002608B9 /* DosPalabras.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DosPalabras.cpp; sourceTree = "<group>"; };
+		A574C102207D0C9A00AB2373 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
 		A5830DFB20179C1E00AE079B /* Pruba_Clases.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pruba_Clases.cpp; sourceTree = "<group>"; };
 		A5830DFC20179C1E00AE079B /* Pruba_Clases.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pruba_Clases.hpp; sourceTree = "<group>"; };
 		A5830DFE2017A02D00AE079B /* Fraccion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraccion.h; sourceTree = "<group>"; };
@@ -93,6 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				A511F3E9207BBBED0028AC42 /* Fecha.cpp */,
+				A574C102207D0C9A00AB2373 /* Material.h */,
+				A540E792207FB43E005879F6 /* Libro.h */,
+				A540E793207FB6B0005879F6 /* Disco.h */,
+				A540E794207FB750005879F6 /* Software.h */,
+				A540E791207FADB2005879F6 /* Reserva.h */,
 				A511F3EA207BBBED0028AC42 /* Fecha.hpp */,
 			);
 			path = "Proyecto 3";
@@ -260,8 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A55F753D2077C73800329B84 /* ejercicioPlantillas.cpp in Sources */,
-				A511F3EB207BBBED0028AC42 /* Fecha.cpp in Sources */,
+				A5F8235C207FA2270007F1FE /* Fecha.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

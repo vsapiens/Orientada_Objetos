@@ -1,23 +1,10 @@
-//
-//  Fecha.cpp
-//  Orientada_Objetos
-//
-//  Created by Erick González on 4/9/18.
-//  Copyright © 2018 Erick González. All rights reserved.
-//
-
-#include "Fecha.hpp"
-
-//
-//  main.cpp
-//  fechasTutoring
-//
-//  Created by Yolanda Martinez on 4/8/18.
-//  Copyright Â© 2018 com.itesm. All rights reserved.
-//
-
 #include <iostream>
 using namespace std;
+
+#include "Libro.h"
+#include "Disco.h"
+#include "Software.h"
+
 
 int main() {
     
