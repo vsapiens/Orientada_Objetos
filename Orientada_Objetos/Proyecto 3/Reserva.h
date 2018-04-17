@@ -8,14 +8,14 @@
 
 #ifndef Reserva_h
 #define Reserva_h
-#include "Fecha.hpp"
+#include "Fecha.h"
 class Reserva
 {
 public:
     Reserva();
     Reserva(int, int, Fecha);
-    int getidMaterial(){return idMaterial;};
-    int getidCliente(){return idCliente;};
+    int getIdMaterial(){return idMaterial;};
+    int getIdCliente(){return idCliente;};
     Fecha getReservacion(){return Reservacion;};
     
     void setIdMaterial(int idM){idMaterial = idM;};

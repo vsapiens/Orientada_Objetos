@@ -11,8 +11,9 @@
 #include "Material.h"
 class Disco:public Material
 {
+public:
     Disco():duracion(0){};
-    Disco(int dur):duracion(dur){};
+    Disco(int idMat, string tit,int dur):Material(idMat,tit),duracion(dur){};
     int getDuracion(){return duracion;};
 
     void setDuracion(int dur){duracion = dur;};
@@ -29,6 +30,7 @@ int Disco::cantidadDiasdePrestamo()
 }
 void Disco::muestra()
 {
+    cout<<"Tipo de Material: Disco"<<endl;
     cout<<"Titulo: "<<titulo<<endl;
     cout<<"ID: "<<idMaterial<<endl;
     cout<<"Duracion "<<duracion<<endl;

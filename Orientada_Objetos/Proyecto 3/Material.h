@@ -12,7 +12,8 @@
 class Material
 {
 public:
-    
+    Material():idMaterial(0),titulo(""){};
+    Material(int idMat, string tit):titulo(tit),idMaterial(idMat){};
     void setIdMaterial(int idMat){idMaterial = idMat;};
     int getIdMaterial(){return idMaterial;};
     void setTitulo(string tit){titulo=tit;};
@@ -20,6 +21,7 @@ public:
     
     virtual void muestra() = 0;
     virtual int cantidadDiasdePrestamo() = 0;
+    bool bPrestado = false;
 protected:
     int idMaterial;
     string titulo;

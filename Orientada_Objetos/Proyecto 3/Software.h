@@ -11,8 +11,9 @@
 #include "Material.h"
 class Software:public Material
 {
+public:
     Software():sistemaOper(""){};
-    Software(string Soft):sistemaOper(Soft){};
+    Software(int idMat, string tit,string Soft):Material(idMat,tit),sistemaOper(Soft){};
     string getSoftware(){return sistemaOper;};
     
     void setSoftware(string Soft){sistemaOper = Soft;};
@@ -28,6 +29,7 @@ int Software::cantidadDiasdePrestamo()
 }
 void Software::muestra()
 {
+    cout<<"Tipo de Material: Software"<<endl;
     cout<<"Titulo: "<<titulo<<endl;
     cout<<"ID: "<<idMaterial<<endl;
     cout<<"Sistema Operativo: "<<sistemaOper<<endl;

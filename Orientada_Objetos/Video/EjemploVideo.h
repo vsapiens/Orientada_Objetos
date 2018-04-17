@@ -6,7 +6,7 @@
 //  Copyright © 2018 Erick González. All rights reserved.
 //
 #include "Tema.h"
-#include "Fecha.h"
+#include "Fecha2.h"
 #include "Autor.h"
 #include "Materia.h"
 

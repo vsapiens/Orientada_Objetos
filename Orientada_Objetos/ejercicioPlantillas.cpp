@@ -30,7 +30,7 @@ T datoMayor(T matriz[10][10], int iNumber)
         {
             if(mayor < matriz[iCounter][iInnerCounter])
             {
-                mayor =matriz[iCounter][iInnerCounter];
+                mayor = matriz[iCounter][iInnerCounter];
             }
         }
     }

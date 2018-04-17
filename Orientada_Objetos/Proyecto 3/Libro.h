@@ -12,8 +12,9 @@
 #include "Material.h"
 class Libro:public Material
 {
+public:
     Libro():Autor(""),numPag(0){};
-    Libro(string Aut, int iNum):Autor(Aut),numPag(iNum){};
+    Libro(int idMat, string tit, string Aut, int iNum):Material(idMat,tit),Autor(Aut),numPag(iNum){};
     int getNumPag(){return numPag;};
     string getAutor(){return Autor;};
     
@@ -32,6 +33,7 @@ int Libro::cantidadDiasdePrestamo()
 }
 void Libro::muestra()
 {
+    cout<<"Tipo de Material: Libro"<<endl;
     cout<<"Titulo: "<<titulo<<endl;
     cout<<"ID: "<<idMaterial<<endl;
     cout<<"Número de Páginas: "<<numPag<<endl;
