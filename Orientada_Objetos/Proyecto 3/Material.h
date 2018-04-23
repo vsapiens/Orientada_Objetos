@@ -5,10 +5,9 @@
 //  Created by Erick González on 4/10/18.
 //  Copyright © 2018 Erick González. All rights reserved.
 //
-
+#include "Reserva.h"
 #ifndef Material_h
 #define Material_h
-#include "Reserva.h"
 class Material
 {
 public:
@@ -21,7 +20,6 @@ public:
     
     virtual void muestra() = 0;
     virtual int cantidadDiasdePrestamo() = 0;
-    bool bPrestado = false;
 protected:
     int idMaterial;
     string titulo;

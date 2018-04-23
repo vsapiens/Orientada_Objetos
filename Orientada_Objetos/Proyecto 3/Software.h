@@ -14,9 +14,8 @@ class Software:public Material
 public:
     Software():sistemaOper(""){};
     Software(int idMat, string tit,string Soft):Material(idMat,tit),sistemaOper(Soft){};
-    string getSoftware(){return sistemaOper;};
-    
-    void setSoftware(string Soft){sistemaOper = Soft;};
+    string getSistemaOper(){return sistemaOper;};
+    void setSistemaOper(string Soft){sistemaOper = Soft;};
     void muestra();
     int cantidadDiasdePrestamo();
 private:

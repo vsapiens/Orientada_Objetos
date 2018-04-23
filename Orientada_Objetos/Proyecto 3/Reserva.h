@@ -16,22 +16,24 @@ public:
     Reserva(int, int, Fecha);
     int getIdMaterial(){return idMaterial;};
     int getIdCliente(){return idCliente;};
-    Fecha getReservacion(){return Reservacion;};
+    Fecha getFechaReservacion(){return fechaReservacion;};
     
     void setIdMaterial(int idM){idMaterial = idM;};
     void setIdCliente(int idC){idCliente = idC;};
-    void setReservacion(Fecha Res){Reservacion = Res;};
+    void setFechaReservacion(Fecha Res){fechaReservacion = Res;};
     Fecha calculaFechaFinReserva(int);
 private:
     int idMaterial, idCliente;
-    Fecha Reservacion;
+    Fecha fechaReservacion;
 };
 
-Reserva::Reserva(): Reservacion(),idMaterial(0),idCliente(0){};
-Reserva::Reserva(int idM, int idC, Fecha f1):Reservacion(f1),idMaterial(idM),idCliente(idC){};
+Reserva::Reserva():fechaReservacion(),idMaterial(0),idCliente(0){};
+
+Reserva::Reserva(int idM, int idC, Fecha f1):fechaReservacion(f1),idMaterial(idM),idCliente(idC){};
+
 Fecha Reserva::calculaFechaFinReserva(int iDias)
 {
-    return Reservacion + iDias;
+    return fechaReservacion + iDias;
 }
 
 #endif /* Reserva_h */

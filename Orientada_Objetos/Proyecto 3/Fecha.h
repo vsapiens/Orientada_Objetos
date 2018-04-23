@@ -66,23 +66,6 @@ bool operator >(Fecha f1, Fecha f2)
     return true;
 }
 
-// como friend la sobrecarga del operador <
-bool operator <(Fecha f1, Fecha f2)
-{
-    if(!(f1.aa < f2.aa))
-    {
-        if (!(f1.mm < f2.mm))
-        {
-            if (!(f1.dd < f2.dd))
-            {
-                return false;
-            }
-            else return true;
-        }
-        else return true;
-    }
-    return true;
-}
 // como friend la sobrecarga del operador ==
 bool operator == (Fecha f1, Fecha f2)
 {
@@ -92,6 +75,23 @@ bool operator == (Fecha f1, Fecha f2)
 bool operator >=(Fecha f1, Fecha f2)
 {
     return (f1 > f2 || f1 == f2) ;
+}
+// como friend la sobrecarga del operador <
+bool operator <(Fecha f1, Fecha f2)
+{
+    if(f1.aa >= f2.aa)
+    {
+        if (f1.mm >= f2.mm)
+        {
+            if (f1.dd >= f2.dd)
+            {
+                return false;
+            }
+            else return true;
+        }
+        else return true;
+    }
+    return true;
 }
 // como friend la sobrecarga del operador <=
 bool operator <=(Fecha f1, Fecha f2)
@@ -159,7 +159,7 @@ Fecha operator +(Fecha f1, int n)
     int iResult = 0;
     f1.dd += n;
     iResult = f1.dd;
-    while(iResult > 0)
+    while(iResult != 0)
     {
         switch (f1.mm) {
             case 1:
