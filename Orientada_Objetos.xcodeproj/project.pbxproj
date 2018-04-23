@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A562A03E208579BE009799CE /* Proyecto #3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A540E795207FC881005879F6 /* Proyecto #3.cpp */; };
+		A527F4D3208A496D0041458C /* Proyecto #3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A540E795207FC881005879F6 /* Proyecto #3.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +33,7 @@
 		A5198FBC204319C600CC5220 /* Materia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Materia.h; sourceTree = "<group>"; };
 		A5198FBD204319D000CC5220 /* Tema.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tema.h; sourceTree = "<group>"; };
 		A5198FBF20431A0E00CC5220 /* Fecha2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fecha2.h; sourceTree = "<group>"; };
+		A527F4D1208A434F0041458C /* Clase_Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Clase_Vector.cpp; sourceTree = "<group>"; };
 		A52CD3CE200AD5A2001487E0 /* Dados_Histograma.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dados_Histograma.cpp; sourceTree = "<group>"; };
 		A5300F8D205C25E40012393A /* Chequera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chequera.h; sourceTree = "<group>"; };
 		A531180E203C7F3100A440B7 /* PersonaTaxi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonaTaxi.h; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 				A5E7FD462015B11D0047BADB /* Tiempos_Atletismo.cpp */,
 				A531780B2012548900D462A2 /* Ventas.cpp */,
 				A5A4D8DC202A3B700030DC51 /* Arch.cpp */,
+				A527F4D1208A434F0041458C /* Clase_Vector.cpp */,
 			);
 			path = Orientada_Objetos;
 			sourceTree = "<group>";
@@ -271,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A562A03E208579BE009799CE /* Proyecto #3.cpp in Sources */,
+				A527F4D3208A496D0041458C /* Proyecto #3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
