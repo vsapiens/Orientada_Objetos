@@ -51,19 +51,19 @@ private:
 // como friend la sobrecarga del operador >
 bool operator >(Fecha f1, Fecha f2)
 {
-    if(!(f1.aa > f2.aa))
+    if((f1.aa > f2.aa))
     {
-        if (!(f1.mm > f2.mm))
-        {
-            if (!(f1.dd > f2.dd))
-            {
-                return false;
-            }
-            else return true;
-        }
-        else return true;
+        return true;
     }
-    return true;
+    if ((f1.aa == f2.aa) && (f1.mm > f2.mm))
+    {
+        return true;
+    }
+    if ((f1.aa == f2.aa) && (f1.mm == f2.mm) && (f1.dd > f2.dd))
+    {
+        return true;
+    }
+    return false;
 }
 
 // como friend la sobrecarga del operador ==
@@ -79,19 +79,19 @@ bool operator >=(Fecha f1, Fecha f2)
 // como friend la sobrecarga del operador <
 bool operator <(Fecha f1, Fecha f2)
 {
-    if(f1.aa >= f2.aa)
+    if((f1.aa < f2.aa))
     {
-        if (f1.mm >= f2.mm)
-        {
-            if (f1.dd >= f2.dd)
-            {
-                return false;
-            }
-            else return true;
-        }
-        else return true;
+        return true;
     }
-    return true;
+    if ((f1.aa == f2.aa) && (f1.mm < f2.mm))
+    {
+        return true;
+    }
+    if ((f1.aa == f2.aa) && (f1.mm == f2.mm) && (f1.dd<f2.dd))
+    {
+        return true;
+    }
+    return false;
 }
 // como friend la sobrecarga del operador <=
 bool operator <=(Fecha f1, Fecha f2)
@@ -222,7 +222,11 @@ Fecha operator +(Fecha f1, int n)
                     f1.aa++;
                     iResult -= 31;
                 }
-                else iResult -= f1.dd;
+                else
+                {
+                    iResult -= f1.dd;
+                    
+                }
                 break;
         }
     }

@@ -57,31 +57,28 @@ void cargarArchRes()
     Fecha f1;
     int idMat, idCli;
     archEntrada.open("Reserva.txt");
-    while(!archEntrada.eof())
+    while(archEntrada>>f1>>idMat>>idCli)
     {
-        archEntrada>>f1>>idMat>>idCli;
-        
-        ListaRes[iCantRes++] = new Reserva(idMat,idCli,f1);;
+        ListaRes[iCantRes++] = new Reserva(idMat,idCli,f1);
     }
     archEntrada.close();
 }
 
-void guardarArchRes()
+/*void guardarArchRes()
 {
     ofstream archSalida;
     archSalida.open("Reserva.txt");
-    int iCounter = iCantRes;
-    while(iCounter>0)
+    for(int iCounter = 0; iCounter<iCantRes; iCounter++)
     {
-        Reserva *Sal;
-        Sal = ListaRes[iCounter--];
-        Fecha Salida;
-        Salida = Sal->getFechaReservacion();
-        archSalida<< Salida.getDia()<< Salida.getMes()<< Salida.getAnio()<<" "<<Sal->getIdMaterial()<< " "<<Sal->getIdCliente()<<endl;
+        cout<<iCounter<<endl;
+        cout<<iCantRes<<endl;
+        Fecha Salida = ListaRes[iCounter]->getFechaReservacion();
+        archSalida<< Salida.getDia()<<" "<<  Salida.getMes()<<" "<< Salida.getAnio()<<" "<<ListaRes[iCounter]->getIdMaterial()<< " "<<ListaRes[iCounter]->getIdCliente()<<endl;
+    
     }
     archSalida.close();
 }
-
+*/
 Material* getMaterial(int idMaterial)
 {
     Material *Mate;
@@ -171,6 +168,7 @@ void Menu()
             case 'c':
             {
                 int idMaterial = 0, iArticulo = 1;
+                bool bExiste =false;
                 Reserva *Res;
                 
                 cout<<"Introduzca el id del Material"<<endl;
@@ -194,9 +192,10 @@ void Menu()
                         Mate = getMaterial(idMaterial);
                     }
                 }
+                
                 for (int iCounter  =0; iCounter < iCantRes; iCounter++)
                 {
-                    if( ListaRes[iCounter]->getIdMaterial() == idMaterial)
+                    if(ListaRes[iCounter]->getIdMaterial() == idMaterial)
                     {
                         cout<<endl;
                     Res = ListaRes[iCounter];
@@ -208,30 +207,42 @@ void Menu()
                     cout<<" Fecha de Inicio: "<<F1<<endl;
                     F1 = Res->calculaFechaFinReserva(Mate->cantidadDiasdePrestamo());
                     cout<<" Fecha de Terminacion: "<<F1<<endl;
+                        bExiste = true;
                     }
+                    
+                }
+                
+                if(!bExiste)
+                {
+                    
+                    cout<<" No existe una reservación de ese material"<<endl;
+                    
                 }
                 cout<<endl<<endl;
             }
                 break;
             case 'd':
             {
+                //Busqueda por Fecha
                 Fecha fEntrada,fInicio, fTerminar;
                 int iArticulo = 1;
+                Material *Mate;
                 cout<<" Inserte día, mes y año de la busqueda  ";
                 cin>>fEntrada;
-                for(int iCounter =0; iCounter< iCantRes;iCounter++)
+                for(int iCounter =0; iCounter < iCantRes;iCounter++)
                 {
-                    Material *Mate =  getMaterial(ListaRes[iCounter]->getIdMaterial());
+                    Mate =  getMaterial(ListaRes[iCounter]->getIdMaterial());
                     
                     fInicio = ListaRes[iCounter]->getFechaReservacion();
                     
                     fTerminar = ListaRes[iCounter]->calculaFechaFinReserva(Mate->cantidadDiasdePrestamo());
                     
-                    if(fEntrada >= fInicio && fEntrada<=fTerminar)
+                    if(fEntrada >= fInicio && fEntrada <= fTerminar)
                     {
                         cout<<" Articulo de Busqueda #"<<iArticulo++<<endl;
                         cout<<" Titulo: "<< Mate->getTitulo()<<endl;
                         cout<<" ID Cliente: "<<ListaRes[iCounter]->getIdCliente()<<endl;
+                        
                     }
                 }
                 if(iArticulo == 1)
@@ -244,7 +255,8 @@ void Menu()
             {
                 
                 int idCliente, idMaterial;
-                Fecha fEntrada,fInicio, fTerminar;
+                bool bMaterialReservado = false;
+                Fecha fEntrada, fSalida,fInicio, fTerminar;
                 
                 cout<<"Ingrese el ID del Cliente ";
                 cin>>idCliente;
@@ -265,37 +277,56 @@ void Menu()
                 
                 cin>>fEntrada;
                 
-                Reserva *Res;
+                int iNumber  =  Mate->cantidadDiasdePrestamo();
+                fSalida = fEntrada + iNumber;
                 
                 for (int iCounter  =0; iCounter < iCantRes; iCounter++)
                 {
-                    Fecha fInicio,fTerm;
-                    
                     fInicio = ListaRes[iCounter]->getFechaReservacion();
-                    fTerm = ListaRes[iCounter]->calculaFechaFinReserva(Mate->cantidadDiasdePrestamo());
-                    
-                    if(ListaRes[iCounter]->getIdMaterial() == idMaterial && fEntrada > fTerm && fEntrada < fInicio)
+                    fTerminar = ListaRes[iCounter]->calculaFechaFinReserva(Mate->cantidadDiasdePrestamo());
+                    if(ListaRes[iCounter]->getIdMaterial() == idMaterial)
                     {
-                        Res = ListaRes[iCounter];
-                        cout<<" ¡Nuevo Reservación Agregada! "<<endl;
-                        cout<<" Titulo: "<< Mate->getTitulo()<<endl;
-                        cout<<" ID Cliente: "<<Res->getIdCliente()<<endl;
-                        Fecha F1;
-                        F1 = Res->getFechaReservacion();
-                        
-                        ListaRes[++iCounter] = new Reserva(idMaterial,idCliente,F1);
-                        cout<<" Fecha de Inicio: "<<F1<<endl;
-                        F1 = Res->calculaFechaFinReserva(Mate->cantidadDiasdePrestamo());
-                        cout<<" Fecha de Terminacion: "<<F1<<endl;
+                        if((fEntrada >= fInicio && fEntrada <= fTerminar) || (fSalida >= fInicio && fSalida <= fTerminar))
+                            bMaterialReservado = true;
+                            
                     }
+                    
+                    
                 }
+                    
+                
+                
+               if(!bMaterialReservado)
+               {
+                cout<<" ¡Nuevo Reservación Agregada! "<<endl;
+                cout<<" Titulo: "<< Mate->getTitulo()<<endl;
+                cout<<" ID Cliente: "<<idCliente<<endl;
+                ListaRes[iCantRes] = new Reserva(idMaterial,idCliente,fEntrada);
+                cout<<" Fecha de Reserva: "<<fEntrada<<endl;
+                   cout<<iCantRes<<endl;
+                   iCantRes++;
+                   cout<<iCantRes<<endl;
+               }
+               else cout<<" Existe una reservacion durante esa fecha. "<<endl;
+                
+                
             }
                 break;
         }
         
     } while(cMenu != 'f');
     
-  //  guardarArchRes();
+    ofstream archSalida;
+    archSalida.open("Reserva.txt");
+    for(int iCounter = 0; iCounter<iCantRes; iCounter++)
+    {
+        cout<<iCounter<<endl;
+        cout<<iCantRes<<endl;
+        Fecha Salida = ListaRes[iCounter]->getFechaReservacion();
+        archSalida<< Salida.getDia()<<" "<<  Salida.getMes()<<" "<< Salida.getAnio()<<" "<<ListaRes[iCounter]->getIdMaterial()<< " "<<ListaRes[iCounter]->getIdCliente()<<endl;
+        
+    }
+    archSalida.close();
 }
 
 int main()
