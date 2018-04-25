@@ -244,7 +244,7 @@ istream& operator >>(istream& in,Fecha& f1)
 // no incluyas espacios ni enter
 ostream& operator <<(ostream& out,Fecha& f1)
 {
-    out<<f1.dd<<"/"<<f1.mm<<"/"<<f1.aa;
+    out<<f1.dd<<"/"<<f1.nombreMes()<<"/"<<f1.aa;
     return out;
 }
 #endif /* Fecha_hpp */

@@ -303,9 +303,7 @@ void Menu()
                 cout<<" ID Cliente: "<<idCliente<<endl;
                 ListaRes[iCantRes] = new Reserva(idMaterial,idCliente,fEntrada);
                 cout<<" Fecha de Reserva: "<<fEntrada<<endl;
-                   cout<<iCantRes<<endl;
                    iCantRes++;
-                   cout<<iCantRes<<endl;
                }
                else cout<<" Existe una reservacion durante esa fecha. "<<endl;
                 
@@ -320,8 +318,6 @@ void Menu()
     archSalida.open("Reserva.txt");
     for(int iCounter = 0; iCounter<iCantRes; iCounter++)
     {
-        cout<<iCounter<<endl;
-        cout<<iCantRes<<endl;
         Fecha Salida = ListaRes[iCounter]->getFechaReservacion();
         archSalida<< Salida.getDia()<<" "<<  Salida.getMes()<<" "<< Salida.getAnio()<<" "<<ListaRes[iCounter]->getIdMaterial()<< " "<<ListaRes[iCounter]->getIdCliente()<<endl;
         
