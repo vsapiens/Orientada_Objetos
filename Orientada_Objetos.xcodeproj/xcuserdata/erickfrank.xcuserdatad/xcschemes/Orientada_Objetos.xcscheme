@@ -47,7 +47,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/erickfrank/Documents/GitHub/Orientada_Objetos/Orientada_Objetos/Proyecto 3"
+      customWorkingDirectory = "/Users/erickfrank/Documents/GitHub/Orientada_Objetos/Orientada_Objetos"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"

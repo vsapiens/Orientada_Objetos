@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A527F4D3208A496D0041458C /* Proyecto #3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A540E795207FC881005879F6 /* Proyecto #3.cpp */; };
+		A5F10877209375570058EE01 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5F10876209375570058EE01 /* Vector.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +82,7 @@
 		A5E8886E2048E2BF008F64E9 /* Clase_Tiempo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Clase_Tiempo.cpp; sourceTree = "<group>"; };
 		A5EA4410201CF77C00C06E7E /* Esfera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Esfera.cpp; sourceTree = "<group>"; };
 		A5EA4411201CF77D00C06E7E /* Esfera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Esfera.hpp; sourceTree = "<group>"; };
+		A5F10876209375570058EE01 /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +204,7 @@
 				A531780B2012548900D462A2 /* Ventas.cpp */,
 				A5A4D8DC202A3B700030DC51 /* Arch.cpp */,
 				A527F4D1208A434F0041458C /* Clase_Vector.cpp */,
+				A5F10876209375570058EE01 /* Vector.cpp */,
 			);
 			path = Orientada_Objetos;
 			sourceTree = "<group>";
@@ -273,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A527F4D3208A496D0041458C /* Proyecto #3.cpp in Sources */,
+				A5F10877209375570058EE01 /* Vector.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
