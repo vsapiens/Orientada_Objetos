@@ -88,7 +88,6 @@ Material* getMaterial(int idMaterial)
         {
             Mate= ListaMat[iCounter];
             return Mate;
-            
         }
     }
     return NULL;
@@ -293,9 +292,6 @@ void Menu()
                     
                     
                 }
-                    
-                
-                
                if(!bMaterialReservado)
                {
                 cout<<" ¡Nuevo Reservación Agregada! "<<endl;
